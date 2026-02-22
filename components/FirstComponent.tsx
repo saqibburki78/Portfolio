@@ -140,8 +140,8 @@ export default function FirstComponent() {
           Hello, I&apos;m
         </div>
          <div
-          ref={helloTextRef}
-          className="font-medium text-4xl sm:text-6xl md:text-7xl lg:text-9xl mb-2 tracking-wide whitespace-nowrap"
+          ref={textRef}
+          className="font-black text-orange-300 font-rubikWetPaint text-5xl sm:text-6xl md:text-7xl lg:text-9xl lg:mt-8  tracking-wide whitespace-nowrap"
         >
           Saqib Burki
         </div>
@@ -154,7 +154,7 @@ export default function FirstComponent() {
       >
         <div
           ref={text}
-          className="text-orange-300 z-40 text-[8vw] xs:text-[9vw] sm:text-[10vw] md:text-[12vw] lg:text-[15vw] xl:text-[18vw] font-extrabold tracking-tight uppercase whitespace-nowrap will-change-transform transform translate-x-[120vw] sm:translate-x-[120vw] md:translate-x-[90vw] drop-shadow-[0_0_30px_rgba(251,146,60,0.5)]"
+          className="text-orange-300 z-40 mt-20 md:mt-0 lg:mt-0 text-[15vw] xs:text-[15vw] sm:text-[15vw] md:text-[15vw] lg:text-[15vw] xl:text-[18vw] font-extrabold tracking-tight uppercase whitespace-nowrap will-change-transform transform translate-x-[120vw] sm:translate-x-[120vw] md:translate-x-[90vw] drop-shadow-[0_0_30px_rgba(251,146,60,0.5)]"
         >
           Creative Web Developer
         </div>

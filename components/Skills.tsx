@@ -182,6 +182,18 @@ export default function Skills() {
       category: "Version Control",
       gradient: "from-gray-700 to-slate-800",
     },
+    {
+      src: "/langchain.svg",
+      name: "LangChain",
+      category: "AI",
+      gradient: "from-blue-600 to-blue-400",
+    },
+    {
+      src: "/openai.svg",
+      name: "OpenAI",
+      category: "AI",
+      gradient: "from-blue-600 to-blue-400",
+    }
   ];
 
   return (

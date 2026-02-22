@@ -95,17 +95,26 @@ export default function Projects() {
       text: "fsociety",
       description:
         "A blog website where I share paid courses links and giveaways with a vibrant community",
-      link: "https://github.com/username/project1",
+      link: "https://fsociety-kappa.vercel.app/",
       tags: ["Next.js", "React", "Tailwind"],
       gradient: "from-cyan-500 to-blue-500",
     },
     {
-      image: "/Screenshot From 2025-12-04 21-58-34.png",
-      text: "Lillith",
+      image: "/Screenshot 2026-02-22 135832.png",
+      text: "islamicGPT",
       description:
-        "An AI chatbot that can answer your questions and get realtime weather updates with advanced NLP",
-      link: "https://github.com/username/project1",
-      tags: ["AI", "Node.js", "API"],
+        "A RAG application that can give answer from the most authentic sources of hadith and Tafseer",
+      link: "https://islamicgpt.vercel.app/",
+      tags: ["AI", "nextjs", "typescript","gemini","RAG"],
+      gradient: "from-purple-500 to-pink-500",
+    },
+    {
+      image: "/socialmedia.png",
+      text: "PodcastShorts",
+      description:
+        "A social media managing application that can manage your social media accounts and also find best shorts in podcast and turn it into shorts ",
+      link: "https://podcastshorts.vercel.app/",
+      tags: ["AI", "nextjs", "typescript","upcoming"],
       gradient: "from-purple-500 to-pink-500",
     },
   ];

@@ -11,24 +11,24 @@ export default function SmoothScroll() {
   useEffect(() => {
     // Initialize Lenis
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
+      lerp: 0.05, // Linear interpolation (0 - 1) for smoother feel
+      wheelMultiplier: 1.0,
+      touchMultiplier: 2.0,
       smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
     });
 
+    // RAF function for GSAP ticker
+    const update = (time: number) => {
+      lenis.raf(time * 1000);
+    };
+
     // Integrate Lenis with GSAP ScrollTrigger
-    lenis.on("scroll", (e) => {
+    lenis.on("scroll", () => {
       ScrollTrigger.update();
     });
 
     // Use GSAP ticker for Lenis RAF
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+    gsap.ticker.add(update);
 
     gsap.ticker.lagSmoothing(0);
 
@@ -37,9 +37,8 @@ export default function SmoothScroll() {
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove((time) => {
-        lenis.raf(time * 1000);
-      });
+      gsap.ticker.remove(update);
+      ScrollTrigger.clearScrollMemory();
     };
   }, []);
 
